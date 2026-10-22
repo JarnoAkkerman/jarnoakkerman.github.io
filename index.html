@@ -34,12 +34,13 @@ body{min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-
 .form-panel textarea{flex:1}
 @media(max-width:650px){.contact-details .card{flex:none}.form-panel .fields{grid-template-rows:none}.form-panel textarea{min-height:137px}}
 
+.package-links{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 24px}.package-links a{display:flex;align-items:center;justify-content:center;gap:8px;flex:1 1 190px;padding:13px 16px;background:var(--blue);color:#fff;border-radius:4px;text-decoration:none;text-align:center;font-size:14px;font-weight:700;line-height:1.4}.package-links a:hover{background:#141c78}@media(max-width:390px){.package-links a{flex-basis:100%}}
 </style>
 </head>
 <body>
 <main class="wrap">
-<section class="contact-details" aria-labelledby="intro-title"><p class="script">Start direct met rijlessen bij</p><h2 id="intro-title">Verkeersschool Klein Holland</h2><p class="intro">Een vraag over rijlessen, een proefles of een rijlespakket? Laat je gegevens achter. We nemen zo snel mogelijk contact met je op.</p><div class="card"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 18h4"/></svg><div><h3>Telefoonnummer</h3><p><a href="tel:+31646721108">06 4672 1108</a></p></div></div>
-<div class="card"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m3 6 9 7 9-7"/></svg><div><h3>E-mail</h3><p><a href="mailto:hrramsodit@gmail.com">hrramsodit@gmail.com</a></p></div></div>
+<section class="contact-details" aria-labelledby="intro-title"><p class="script">Start direct met rijlessen bij</p><h2 id="intro-title">Verkeersschool Klein Holland</h2><p class="intro">Een vraag over rijlessen, een proefles of een rijlespakket? Laat je gegevens achter. We nemen zo snel mogelijk contact met je op.</p><div class="package-links" aria-label="Bekijk onze rijlespakketten"><a href="https://www.verkeersschoolkleinholland.nl/autorijles/" target="_blank" rel="noopener">Pakketten autorijles <span aria-hidden="true">&#8599;</span></a><a href="https://www.verkeersschoolkleinholland.nl/motorrijles/" target="_blank" rel="noopener">Pakketten motorrijles <span aria-hidden="true">&#8599;</span></a></div><div class="card"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 18h4"/></svg><div><h3>Telefoonnummer</h3><p><a href="tel:+31646721108">06 4672 1108</a></p></div></div>
+<div class="card"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m3 6 9 7 9-7"/></svg><div><h3>E-mail</h3><p><a href="mailto:info@verkeersschoolklein-holland.nl">info@verkeersschoolklein-holland.nl</a></p></div></div>
 <div class="card"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><div><h3>Adres</h3><p>Gageldijk 2 8D<br>3602 AL Maarssen</p></div></div>
 
 </section>
@@ -81,10 +82,11 @@ form.addEventListener('submit',async(event)=>{
   status.textContent='Bedankt! De verzenddienst heeft je bericht ontvangen. We nemen zo snel mogelijk contact met je op.';
   form.reset();
  }catch(error){
-  status.textContent='De verzenddienst reageert niet op tijd of kan je bericht niet bevestigen. Je tekst staat nog in het formulier. Mogelijk is het bericht toch ontvangen. Je kunt ons ook rechtstreeks mailen via hrramsodit@gmail.com of bellen op 06 4672 1108.';
+  status.textContent='De verzenddienst reageert niet op tijd of kan je bericht niet bevestigen. Je tekst staat nog in het formulier. Mogelijk is het bericht toch ontvangen. Je kunt ons ook rechtstreeks mailen via info@verkeersschoolklein-holland.nl of bellen op 06 4672 1108.';
  }finally{
   clearTimeout(timeout);button.disabled=false;button.textContent='BERICHT VERZENDEN →';
  }
 });
 </script></body>
 </html>
+
